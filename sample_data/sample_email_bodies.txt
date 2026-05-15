@@ -1,0 +1,56 @@
+# Sample Fuel Request Email Bodies
+
+These are fictional sample email bodies used for demonstration purposes only.
+They do not contain real company data, real aircraft records, employee names, or internal operational information.
+
+---
+
+Sample Email 1
+
+Subject: Fuel Request
+
+Aircraft: N123AB
+Ramp: Ramp A
+Spot: 4
+Fuel Type: 100LL
+Requested Time: 2026-05-15 07:32
+
+Notes: Standard fuel request for sample dashboard testing.
+
+---
+
+Sample Email 2
+
+Subject: Fuel Request
+
+Aircraft: N456CD
+Ramp: Ramp B
+Spot: 2
+Fuel Type: Jet A
+Requested Time: 2026-05-15 07:41
+
+Notes: Sample request used to demonstrate ramp and spot extraction.
+
+---
+
+Sample Email 3
+
+Subject: Fuel Request
+
+Aircraft: N789EF
+Ramp: Ramp C
+Spot: 8
+Fuel Type: 100LL
+Requested Time: 2026-05-15 08:05
+
+Notes: Sample request used to demonstrate multiple generic parking locations.
+
+---
+
+Example Parsed Fields
+
+Aircraft -> tail_number
+Ramp -> ramp
+Spot -> spot
+Fuel Type -> fuel_type
+Requested Time -> request_time
