@@ -1,0 +1,4 @@
+tail_number,row,spot,fuel_type,request_time
+N123AB,10,4,100LL,2026-05-15 07:32
+N456CD,11,2,Jet A,2026-05-15 07:41
+N789EF,15,8,100LL,2026-05-15 08:05
