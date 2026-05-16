@@ -33,6 +33,7 @@ This project demonstrates a workflow that:
 | `docs/workflow.md` | General workflow explanation |
 | `docs/data_fields.md` | Data field definitions |
 | `dashboard/Parking_Location_sample.html` | Static sample dashboard using fictional data |
+| `vba/SampleFuelRequestParser.bas` | Sanitized VBA demo showing basic field extraction from fictional fuel request text |
 
 ## Sample Workflow
 
