@@ -1,49 +1,70 @@
 # Parking Location Tool
 
-A practical aviation dispatch workflow concept for tracking aircraft parking locations from fuel request information.
+A sanitized aviation-operations portfolio project demonstrating how semi-structured operational messages can be converted into a practical aircraft-location decision-support dashboard.
 
 ## Overview
 
-The Parking Location Tool is a small operational support project designed to help dispatchers quickly identify aircraft parking locations based on fuel request information.
+This project originated from a recurring dispatch problem: parking information can become fragmented across fuel-service requests, recent movement data, verbal updates, and shift notes. The portfolio version uses fictional aircraft, generalized locations, and synthetic timestamps while preserving the underlying workflow design.
 
-The project demonstrates how parking-related information can be extracted, structured, and displayed in a simple dashboard format for faster lookup during dispatch operations.
+## What the Project Demonstrates
 
-## Problem
+- Parsing semi-structured messages into normalized records
+- Combining request history with recent movement signals
+- Applying conservative status rules when location confidence is limited
+- Presenting operationally useful information through a searchable dashboard and visual map
+- Designing fallbacks for partial, delayed, or unavailable data
+- Maintaining clear documentation, regression checks, and acceptance criteria
 
-In a busy dispatch environment, aircraft parking information can be scattered across fuel request emails, verbal communication, and dispatcher notes.
+## Generalized Status Model
 
-This can create friction when dispatchers, pilots, or maintenance personnel need to quickly confirm where an aircraft is parked.
+| Status | Portfolio definition |
+|---|---|
+| `Parking` | A recent service-location record exists and no later movement is detected |
+| `Landed` | A later flight appears to have ended, but no newer service-location record is available |
+| `Flying` | Recent movement data indicates the aircraft is airborne |
+| `Uncertain` | Available information is stale, incomplete, or insufficient to confirm the current location |
 
-## Solution
+The production workflow uses additional safeguards and operational context that are intentionally excluded from this public repository.
 
-This project demonstrates a workflow that:
+## Architecture
 
-- Reads sample fuel request information
-- Extracts key parking-related fields
-- Organizes aircraft tail number, ramp, spot, fuel type, and request time
-- Displays the information in a simple dashboard-style format
-- Supports faster lookup and cleaner dispatcher handoff
+```text
+Sanitized request source
+        ↓
+Field extraction and normalization
+        ↓
+Optional recent-movement lookup
+        ↓
+Status and confidence rules
+        ↓
+Structured table
+        ↓
+Searchable dashboard / visual map
+        ↓
+Dispatcher decision support
+```
 
 ## Repository Contents
 
 | Path | Description |
 |---|---|
-| `sample_data/sample_fuel_requests.csv` | Fictional structured fuel request sample data |
-| `sample_data/sample_email_bodies.txt` | Fictional sample email bodies used to show field extraction |
-| `docs/workflow.md` | General workflow explanation |
-| `docs/data_fields.md` | Data field definitions |
-| `dashboard/Parking_Location_sample.html` | Static sample dashboard using fictional data |
-| `vba/SampleFuelRequestParser.bas` | Sanitized VBA demo showing basic field extraction from fictional fuel request text |
+| `sample_data/` | Fictional request records and sample message bodies |
+| `docs/workflow.md` | Generalized workflow explanation |
+| `docs/data_fields.md` | Public sample field definitions |
+| `dashboard/Parking_Location_sample.html` | Static dashboard using fictional data |
+| `vba/SampleFuelRequestParser.bas` | Sanitized VBA field-extraction demonstration |
+| `CHANGELOG.md` | Portfolio-level development history |
 
-## Sample Workflow
+## Privacy and Scope
 
-```text
-Fuel Request Email
-        ↓
-Data Extraction
-        ↓
-Structured Table
-        ↓
-Dashboard View
-        ↓
-Dispatcher Lookup
+This repository does **not** contain employer documents, real aircraft records, employee names, internal system paths, credentials, operational maps, or confidential procedures. It is a generalized portfolio representation of the engineering and workflow-design concepts.
+
+## Current Portfolio Direction
+
+Planned public-safe improvements include:
+
+- A richer fictional status engine
+- Synthetic movement events and confidence scoring
+- A visual map using invented ramp labels
+- Automated regression examples for status-priority rules
+- Expanded documentation for failure modes and operational safeguards
