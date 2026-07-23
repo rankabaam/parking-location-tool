@@ -1,0 +1,6 @@
+[
+  {"tail_number":"N101PX","aircraft":"Trainer 101","ramp":"Ramp Alpha","spot":"A-04","request_time":"2026-07-23T12:05:00+00:00","flight_seen_after_request":false,"airborne_now":false,"observed_at":"2026-07-23T12:10:00+00:00"},
+  {"tail_number":"N202PX","aircraft":"Trainer 202","ramp":"Ramp Bravo","spot":"B-02","request_time":"2026-07-23T08:10:00+00:00","flight_seen_after_request":true,"airborne_now":false,"observed_at":"2026-07-23T13:30:00+00:00"},
+  {"tail_number":"N303PX","aircraft":"Trainer 303","ramp":"Ramp Alpha","spot":"A-07","request_time":"2026-07-23T10:45:00+00:00","flight_seen_after_request":true,"airborne_now":true,"observed_at":"2026-07-23T14:00:00+00:00"},
+  {"tail_number":"N404PX","aircraft":"Trainer 404","ramp":"Ramp Charlie","spot":"C-01","request_time":"2026-07-20T08:00:00+00:00","flight_seen_after_request":false,"airborne_now":null,"observed_at":null}
+]
