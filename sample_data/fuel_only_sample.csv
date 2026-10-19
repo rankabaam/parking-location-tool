@@ -1,0 +1,6 @@
+aircraft,area,position,requested_at
+DEMO-A01,Area North,Spot N-1,2026-08-15T10:00:00Z
+DEMO-A02,Area South,Spot S-4,2026-08-14T19:00:00Z
+DEMO-A03,Area North,Spot N-5,2026-08-14T05:00:00Z
+DEMO-A04,Area South,Spot S-3,2026-08-12T09:00:00Z
+DEMO-A01,Area North,Spot N-2,2026-08-15T09:00:00Z
