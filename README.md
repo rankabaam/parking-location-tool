@@ -2,6 +2,21 @@
 
 A sanitized aviation-operations portfolio project that turns synthetic service-location records and movement signals into a searchable aircraft-location decision-support dashboard.
 
+## Latest Portfolio Update: Fuel Request-only (October 2026)
+
+The later operational direction simplified the system by removing ADS-B / flight-status dependencies. This repository now includes a **separate synthetic Fuel Request-only demo** under `src/fuel_only.py`.
+
+```bash
+python -m src.fuel_only --as-of 2026-08-15T12:00:00Z
+python -m unittest discover -s tests -v
+```
+
+Open `dashboard/Fuel_Only_sample.html` after generation. It shows age-based review bands, offline search, and an illustrative location list; records 48h and older are marked uncertain and excluded from that view. The page auto-reloads every 30 seconds, but CSV input is only refreshed when the generator runs.
+
+See [Fuel Request-only design and limitations](docs/fuel_request_only_demo.md). The older four-state ADS-B-informed demonstration below is retained **for historical comparison, not as the latest operational configuration**. Neither sample contains the original workplace code or integrations.
+
+---
+
 ## Portfolio Demo
 
 This repository now includes a runnable, standard-library Python demo rather than only a static mockup.
